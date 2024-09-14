@@ -1,10 +1,13 @@
-import { app } from "./app";
+import { app } from "./app.js";
 
-try {
-  await app.listen({ port: 3000 })
+
+app.listen({
+  port: 3333,
+  host: "0.0.0.0"
+}).then(() => {
+
   console.log("HTTP Server Running!🔥")
-} catch (err) {
-  app.log.error(err)
-  process.exit(1)
 }
+
+)
 
