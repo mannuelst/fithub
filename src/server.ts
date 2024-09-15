@@ -1,12 +1,13 @@
-import { app } from "./app.js";
+import { app } from "@/app.js";
+import { env } from "@/env";
 
 
 app.listen({
-  port: 3333,
+  port: env.PORT,
   host: "0.0.0.0"
 }).then(() => {
 
-  console.log("HTTP Server Running!🔥")
+  console.log("🔥 HTTP Server Running!")
 }
 
 )
